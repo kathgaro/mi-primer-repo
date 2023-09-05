@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Arima', cursive;
+}
+
+/* GRID */
+.grid__container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) ;
+    grid-template-rows: 0.3fr 1fr 1fr 0.8fr;
+    grid-template-areas: 
+    "menu           menu        menu"
+    "nota       principal     principal"
+    "nota       principal     principal"
+    "copy        copy         copy   "
+    ;
+}
+
+.cabeza{
+    grid-area: menu;
+}
+.publi{
+    grid-area: nota;
+}
+
+.galeria{
+    grid-area: principal;
+}
+.pie{
+    grid-area: copy;
+}
+
+
+/* menu */
+.cabeza__span{
+    font-size: 0.7rem;
+    background-color: #000000;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+    padding-top: 11px;
+    height: 30px;
+}
+.cabeza__span p{
+    color: #ffffff;
+    padding: 0;
+    margin: 0;
+}
+.cabeza__menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 5rem;
+}
+.cabeza__menu--logo{
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.cabeza__menu ul{
+    display: flex;
+    width: 24rem;
+    justify-content: space-around;
+}
+
+.cabeza__menu ul li{
+    list-style: none;
+}
+.cabeza__menu ul li a{
+    text-decoration: none;
+    color:#000;
+}
+/* aside */
+p{
+    color: #1b1a1a;
+    margin: 3rem;
+}
+/* galeria */
+.galeria{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    padding: 2rem 0 3rem;
+}
+.galeria__producto{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+.galeria__producto img{
+    width: 14rem;
+}
+.galeria__button{
+    background-color: #000;
+    color: #ffffff;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+.pie{
+    background-color: #000;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    /*height: 5rem;*/
+    align-items: center;
+}
+
+/* MEDIA QUERIES */
+
+/*
+
+👉 Si yo codeo desde "desktop" a "mobile" -> max-width
+👉 Si yo codeo desde "mobile" a "desktop" -> min-width
+*/
+/* mobile small */
+@media ( min-width:300px ) and ( max-width:576px ){
+   .grid__container{
+        background-color: rgb(95, 203, 203);
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr 0.5fr 1fr 0.2fr;
+        grid-template-areas: 
+        "menu"
+        "nota"
+        "principal"
+        "copy"
+        ;
+   }
+
+   .galeria__producto img{
+        width: 5rem;
+    }
+    .galeria__button{
+        background-color: #0b369a;
+        color: #ffffff;
+        border: 1px solid #2a09b1a2;
+        border-radius: 20px;
+    }
+
+}
+
+/* tablet */
+@media ( min-width:577px ) and ( max-width:1023px ){
+ /* código */
+}
