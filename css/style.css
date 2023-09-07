@@ -33,6 +33,9 @@
 
 
 /* menu */
+.logo{
+    width: 70px;
+}
 .cabeza__span{
     font-size: 0.7rem;
     background-color: #000000;
@@ -70,6 +73,10 @@
 .cabeza__menu ul li a{
     text-decoration: none;
     color:#000;
+}
+
+.k-bg-color{
+    background-color: #e1e2e0;
 }
 /* aside */
 p{
