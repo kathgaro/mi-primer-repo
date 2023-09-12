@@ -4,13 +4,17 @@
 2. Creamos partial
 3. Variables
 4. Imports
+5. mixins
 */
 
 //Primero van las vairbles 
 @import './variables';
+@import './mixins';
+@import './layout';
 
 //Layout- componentes que sea header, main footer
 @import './cabeza';
 @import './galeria';
 
 //media queries
+@import './mq';

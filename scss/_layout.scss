@@ -1,0 +1,26 @@
+/* GRID */
+.grid__container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) ;
+    grid-template-rows: 0.3fr 1fr 1fr 0.8fr;
+    grid-template-areas: 
+    "menu           menu        menu"
+    "nota       principal     principal"
+    "nota       principal     principal"
+    "copy        copy         copy   "
+    ;
+}
+
+.cabeza{
+    grid-area: menu;
+}
+.publi{
+    grid-area: nota;
+}
+
+.galeria{
+    grid-area: principal;
+}
+.pie{
+    grid-area: copy;
+}

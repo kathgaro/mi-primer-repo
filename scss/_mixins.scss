@@ -1,0 +1,33 @@
+// @mixin > @include
+// definir     invocar
+
+
+// Sin parametros
+@mixin ancho-alto{
+    width: 50%;
+    height: 120px;
+}
+
+@mixin titulo-principal{
+    font-size: 0.7rem;
+    font-family: $mi-fuente-principal;
+    background-color: $color-primary;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+@mixin boton{
+    background-color: #0b369a;
+     color: #ffffff;
+     border: 1px solid #2a09b1a2;
+     border-radius: 20px;
+}
+
+//Mixin con parametros
+
+@mixin flex-k ( $j-c, $a-i, $c){
+    display: flex;
+    justify-content: $j-c;
+    align-items: $a-i;
+    flex-direction: $c;
+}

@@ -1,8 +1,8 @@
 /* galeria */
 .galeria{
-    display: flex;
+    @include flex-k(center, center, row);
     flex-flow: wrap;
-    justify-content: center;
+    
     padding: 2rem 0 3rem;
 
     &__producto{

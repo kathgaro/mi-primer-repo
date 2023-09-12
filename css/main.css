@@ -1,18 +1,45 @@
+@charset "UTF-8";
 /*
 1. Instalamos sass
 2. Creamos partial
 3. Variables
 4. Imports
+5. mixins
 */
+/* GRID */
+.grid__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 0.3fr 1fr 1fr 0.8fr;
+  grid-template-areas: "menu           menu        menu" "nota       principal     principal" "nota       principal     principal" "copy        copy         copy   ";
+}
+
+.cabeza {
+  grid-area: menu;
+}
+
+.publi {
+  grid-area: nota;
+}
+
+.galeria {
+  grid-area: principal;
+}
+
+.pie {
+  grid-area: copy;
+}
+
 .cabeza__span {
   font-size: 0.7rem;
+  font-family: "Arima", cursive;
   background-color: #000000;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1px;
-  width: 100%;
+  width: 50%;
+  height: 120px;
   padding-top: 11px;
-  height: 30px;
   font-family: "Arima", cursive;
 }
 .cabeza__span p {
@@ -20,12 +47,21 @@
   padding: 0;
   margin: 0;
 }
+.cabeza__menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: none;
+  height: 5rem;
+}
 
 /* galeria */
 .galeria {
   display: flex;
-  flex-flow: wrap;
   justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-flow: wrap;
   padding: 2rem 0 3rem;
 }
 .galeria__producto {
@@ -41,6 +77,29 @@
   color: #ffffff;
   border: 1px solid #000;
   border-radius: 10px;
+}
+
+/* mobile small */
+@media (min-width: 300px) and (max-width: 576px) {
+  .grid__container {
+    background-color: rgb(95, 203, 203);
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr 0.5fr 1fr 0.2fr;
+    grid-template-areas: "menu" "nota" "principal" "copy";
+  }
+  .galeria__producto img {
+    width: 5rem;
+  }
+  .galeria__button {
+    background-color: #0b369a;
+    color: #ffffff;
+    border: 1px solid rgba(42, 9, 177, 0.6352941176);
+    border-radius: 20px;
+  }
+}
+/* tablet */
+@media (min-width: 577px) and (max-width: 1023px) {
+  /* código */
 }
 
 /*# sourceMappingURL=main.css.map */
