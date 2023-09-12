@@ -1,0 +1,46 @@
+/*
+1. Instalamos sass
+2. Creamos partial
+3. Variables
+4. Imports
+*/
+.cabeza__span {
+  font-size: 0.7rem;
+  background-color: #000000;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: 100%;
+  padding-top: 11px;
+  height: 30px;
+  font-family: "Arima", cursive;
+}
+.cabeza__span p {
+  color: #ffffff;
+  padding: 0;
+  margin: 0;
+}
+
+/* galeria */
+.galeria {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  padding: 2rem 0 3rem;
+}
+.galeria__producto {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+.galeria__producto img {
+  width: 14rem;
+}
+.galeria__button {
+  background-color: #000;
+  color: #ffffff;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+
+/*# sourceMappingURL=main.css.map */

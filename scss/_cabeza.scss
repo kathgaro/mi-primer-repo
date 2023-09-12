@@ -1,0 +1,22 @@
+.cabeza{
+    &__span{
+        font-size: 0.7rem;
+        background-color: $black;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        width: 100%;
+        padding-top: 11px;
+        height: 30px;
+        font-family: $mi-fuente-principal;
+
+        p{
+            color: #ffffff;
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+}
+
+
