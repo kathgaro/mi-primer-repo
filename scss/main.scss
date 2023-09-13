@@ -10,11 +10,13 @@
 //Primero van las vairbles 
 @import './variables';
 @import './mixins';
+@import './reset';
 @import './layout';
 
 //Layout- componentes que sea header, main footer
 @import './cabeza';
 @import './galeria';
+@import './footer';
 
 //media queries
 @import './mq';

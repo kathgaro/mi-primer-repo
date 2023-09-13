@@ -18,7 +18,14 @@
         @include flex-k (space-around, center, none);
         height: 5rem;
         }
-    
+
+    .logo{
+         width: 70px;
+        }
+    //Color de bg de navbar
+    .k-bg-color{
+        background-color: #e1e2e0;
+    }
 
 }
 
