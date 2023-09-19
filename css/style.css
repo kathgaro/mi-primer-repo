@@ -1,153 +1,309 @@
 *{
-    margin: 0;
     padding: 0;
-    font-family: 'Arima', cursive;
+    margin: 0;
+    box-sizing: border-box;
+
 }
 
-/* GRID */
-.grid__container{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr) ;
-    grid-template-rows: 0.3fr 1fr 1fr 0.8fr;
-    grid-template-areas: 
-    "menu           menu        menu"
-    "nota       principal     principal"
-    "nota       principal     principal"
-    "copy        copy         copy   "
-    ;
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
 }
 
-.cabeza{
-    grid-area: menu;
-}
-.publi{
-    grid-area: nota;
-}
+/* Degrade */
 
-.galeria{
-    grid-area: principal;
-}
-.pie{
-    grid-area: copy;
-}
-
-
-/* menu */
-.logo{
-    width: 70px;
-}
-.cabeza__span{
-    font-size: 0.7rem;
-    background-color: #000000;
+h2{
     text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    width: 100%;
-    padding-top: 11px;
-    height: 30px;
 }
-.cabeza__span p{
-    color: #ffffff;
-    padding: 0;
-    margin: 0;
-}
-.cabeza__menu{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 5rem;
-}
-.cabeza__menu--logo{
-    font-weight: 700;
-    font-size: 1.5rem;
-}
-.cabeza__menu ul{
-    display: flex;
-    width: 24rem;
-    justify-content: space-around;
-}
+.caja{
+    border: 3px solid purple;
+    margin: 5rem auto 5rem;
+    max-width: 1000px;
+    height: 400px;
+    padding: 1rem;
 
-.cabeza__menu ul li{
-    list-style: none;
+    overflow: hidden;
 }
-.cabeza__menu ul li a{
-    text-decoration: none;
-    color:#000;
-}
-
-.k-bg-color{
-    background-color: #e1e2e0;
-}
-/* aside */
-p{
-    color: #1b1a1a;
-    margin: 3rem;
-}
-/* galeria */
-.galeria{
+.caja-transform{
     display: flex;
     flex-flow: wrap;
-    justify-content: center;
-    padding: 2rem 0 3rem;
+
 }
-.galeria__producto{
-    display: flex;
-    flex-direction: column;
-    margin: 1rem;
-}
-.galeria__producto img{
-    width: 14rem;
-}
-.galeria__button{
-    background-color: #000;
-    color: #ffffff;
-    border: 1px solid #000;
-    border-radius: 10px;
+.transform{
+    width: 500px;
+    height: 500px;
+    border: 3px solid purple;
+    margin: 5rem auto 5rem;
+    overflow: hidden;
 }
 
-.pie{
-    background-color: #000;
-    color: #ffffff;
-    display: flex;
-    justify-content: center;
-    /*height: 5rem;*/
-    align-items: center;
+/* Manual -seccion 
+
+.{
+    /* Se pueden usar numeros +/-
+        Podemos usar px y %
+                        ejeX, ejeY
+    transform: translate(100px, 200px);
+    transform: translateX(100px);
+    transform: translateY(0px);
+}
+*/
+.transform img{
+    width: 150px;
+    height: 150px;
 }
 
-/* MEDIA QUERIES */
+
+.transform--translate{
+    transform: translate(100px, 200px);
+}
+
+/*se mueve al 100% de la dimension de la imagen*/
+.transform--translatex{    
+    transform: translateX(100%);}
+
+/*Duplica 2 veces su tamaño*/
+.transform--scale{
+    transform: scale(2);
+}
+    
+/*Reduce un 50%*/
+.transform--scale-50{
+     transform: scale(0.5);
+    }
+    
+
+    /*Reduce - desaparece */
+.transform--scale-cero{
+    transform: scale(0);
+}
+   
+    /*              ejeX ejeY */
+.transform--scale-xy{
+    transform: scale(1, 2);
+}
+   
+    /*2D - grados*/
+.transform--rotate25{
+    transform: rotate(25deg);
+}
+
+    /*X rota hacia atras*/
+.transform--rotate50{
+    transform: rotateX(50deg);
+}
+
+    /*Y desparece en 90*/
+.transform--rotate320{ 
+    transform: rotateY(320deg);
+}
+
+
+    /*skew - deforma - grados*/
+.transform--skew30{
+    transform: skew(30deg);
+}
+.transform--skew20{
+    transform: skewX(20deg);
+}
+.transform--skew50{
+    transform: skewY(50deg);
+}
+
+
+
+
+
+/* Transiciones y transform*/
+.circle > div{
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    margin-top:5px ;
+}
+circle:hover{
+    transition: 100px;
+}
+.caja-1{
+    background-color: rgb(0, 174, 255);
+    transition-duration: 2s;
+    transition-delay: 1s;
+
+}
+.caja-1:hover{
+    transform: scale(5);
+}
+.caja-2{
+    background-color: rgb(255, 187, 0);
+    transition-duration: 5s;
+    transition-delay: 0;
+}
+.caja-2:hover{
+    transform: translate(1400px) ;
+}
+.caja-3{
+    background-color: rgb(255, 0, 221);
+    transition: 3s;
+}
+.caja-3:hover{
+    transform: translate(400px);
+    width: 300px;
+    height: 300px;
+}
+.caja-4{
+    background-color: rgb(0, 47, 255);
+    transform: translate(400px);
+    transform: skew(30deg) translate(400px);
+    box-shadow: 9px 3px 7px 0.5px rgb(0 0 0 / 16%);
+}
+.caja-5{
+    background-color: rgb(0, 255, 64);
+   transition: 2s;
+   background-image: linear-gradient(rgb(0, 174, 255), rgb(193, 255, 193), yellow);
+}
+.caja-5:hover{
+    transform: translate(600px) scale(2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
-
-👉 Si yo codeo desde "desktop" a "mobile" -> max-width
-👉 Si yo codeo desde "mobile" a "desktop" -> min-width
+    Animaciones
 */
-/* mobile small */
-@media ( min-width:300px ) and ( max-width:576px ){
-   .grid__container{
-        background-color: rgb(95, 203, 203);
-        grid-template-columns: 1fr;
-        grid-template-rows: 0.3fr 0.5fr 1fr 0.2fr;
-        grid-template-areas: 
-        "menu"
-        "nota"
-        "principal"
-        "copy"
-        ;
-   }
-
-   .galeria__producto img{
-        width: 5rem;
-    }
-    .galeria__button{
-        background-color: #0b369a;
-        color: #ffffff;
-        border: 1px solid #2a09b1a2;
-        border-radius: 20px;
-    }
-
+.img-coder{
+    /*Ambas propiedades son obligatorias*/
+    /*nombre de animacion*/
+    animation-name: move;
+    /*tiempo de animacion*/
+    animation-duration: 5s;
+    /*veces que quiero que se repita la animacion*/
+    animation-iteration-count: 3;
+    /*dealy*/
+    animation-delay: 1s;
+    /* por default linear - Probar con ease, ease in, ease out - infinite*/
+    animation-timing-function: infinite;
+    /*ver pagina cubic-beizer.com*/
+    animation-timing-function: cubic-bezier();
 }
 
-/* tablet */
-@media ( min-width:577px ) and ( max-width:1023px ){
- /* código */
+/*forma 1*/
+@keyframes move{
+    /*Que queremos que ocurra? */
+    /*Inicia con*/
+    from{
+        opacity: 1;
+        transform:translate(0) scale(0) rotate(0deg);
+    }
+    /*Termina con*/
+    to{
+        opacity: 0;
+        transform: translate(300px) scale(1.5) rotate(360deg);
+    }
+}
+
+.img-coder-copy{
+    animation-name: moveCopy;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+/*forma 2*/
+@keyframes moveCopy{
+    /*uso de % - Solemos usar inicio 0% y para el fin 100%
+    */
+
+    0%{
+        opacity: 0;
+        transform: translateX(0px)
+    }
+    25%{
+        opacity: 0.1;
+        transform: translateX(400px)
+    }
+    50%{
+        opacity: 0.2;
+        transform: translateY(0px)
+    }
+    75%{
+        opacity: 0.5;
+        transform: translateY(200px)        
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px) 
+    }
+    
+}
+
+
+.gradiente{
+    /*Debemos colocar como minimo 2 colores
+                    "to left"
+    linear-gradient(ubicacion/grados color1, color2, +colores)
+
+    Por default - arriba hacia abajo
+    */
+    background-image: linear-gradient(to top, purple, skyblue, yellow);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* AOS */
+.grid-doggi{
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "grid-doggi-1 grid-doggi-2 "
+    "grid-doggi-3 grid-doggi-4 "
+    "grid-doggi-5 grid-doggi-5 "
+    ;
+    gap: 5px;
+
+}
+.title{
+    background-color: rgb(201, 201, 201);
+    padding: 20px;
+    text-align: center;
+}
+.grid-doggi-size, .grid-michi-size {
+    width: 100%;
+}
+
+/* animate */
+.grid-michi{
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "grid-michi-1 grid-michi-2 "
+    "grid-michi-3 grid-michi-4 "
+    "grid-michi-5 grid-michi-6 "
+    ;
+    gap: 5px;
+
 }
