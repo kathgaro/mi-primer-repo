@@ -1,13 +1,13 @@
 .cabeza{
     &__span{
-            @include titulo-principal;
-            letter-spacing: 1px;
-            @include ancho-alto;
-        
-            padding-top: 11px;
-        
-            font-family: $mi-fuente-principal;
-
+        font-size: 0.7rem;
+        background-color: $color-primary;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        width: 100%;
+        padding-top: 11px;
+        height: 30px;
             p{
                 color: #ffffff;
                 padding: 0;
@@ -17,6 +17,22 @@
     &__menu{
         @include flex-k (space-around, center, none);
         height: 5rem;
+            &--logo{
+                font-weight: 700;
+                font-size: 1.5rem;
+            }
+            ul{
+                display: flex;
+                width: 24rem;
+                justify-content: space-around;
+                li{
+                    list-style: none;
+                    a{
+                        text-decoration: none;
+                        color:$color-primary;
+                    }
+                }
+            }
         }
 
     .logo{
@@ -28,5 +44,9 @@
     }
 
 }
-
+//aside
+p{
+    color:$color-primary;
+    margin: 3rem;
+}
 

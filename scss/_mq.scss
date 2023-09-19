@@ -4,7 +4,7 @@
     .grid__container{
          background-color: rgb(95, 203, 203);
          grid-template-columns: 1fr;
-         grid-template-rows: 0.3fr 0.5fr 1fr 0.2fr;
+         grid-template-rows: 0.1fr 0.3fr 1fr 0.2fr;
          grid-template-areas: 
          "menu"
          "nota"
@@ -12,13 +12,15 @@
          "copy"
          ;
     }
- 
+    
     .galeria{
-        &__producto{
-            img{
-             width: 5rem;
-            }
-        }
+        display: flex;
+        padding: 2rem 0 3rem;
+        flex-direction: column;
+        align-items: center;
+        .carru-display{
+            display: inline-block;
+            } 
         &__button{
            @include boton;
         }
@@ -29,5 +31,9 @@
  
  /* tablet */
  @media ( min-width:577px ) and ( max-width:1023px ){
+   
+     
   /* código */
  }
+
+ 

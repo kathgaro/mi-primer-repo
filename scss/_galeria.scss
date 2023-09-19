@@ -1,10 +1,14 @@
 /* galeria */
 .galeria{
-    @include flex-k(center, center, row);
-    flex-flow: wrap;
+    .carru-display{
+        display: none;
+    }
+    &__contenedor{
+        @extend %flex;
+       
+        padding: 2rem 0 3rem;
+    }
     
-    padding: 2rem 0 3rem;
-
     &__producto{
         display: flex;
         flex-direction: column;
@@ -16,10 +20,7 @@
     }
 
     &__button{
-        background-color: #000;
-        color: #ffffff;
-        border: 1px solid #000;
-        border-radius: 10px;
+        @extend %button-style;
     }
 }
 

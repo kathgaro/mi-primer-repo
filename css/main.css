@@ -6,6 +6,76 @@
 4. Imports
 5. mixins
 */
+.redes-linkedin {
+  color: #0000ff;
+  width: 20px;
+  height: 20px;
+}
+.redes-linkedin:hover {
+  box-shadow: 1px 1px 20px #0000ff;
+}
+
+.redes-spotify {
+  color: #18e718;
+  width: 20px;
+  height: 20px;
+}
+.redes-spotify:hover {
+  box-shadow: 1px 1px 20px #18e718;
+}
+
+.redes-whatsapp {
+  color: #0e5e0e;
+  width: 20px;
+  height: 20px;
+}
+.redes-whatsapp:hover {
+  box-shadow: 1px 1px 20px #0e5e0e;
+}
+
+.redes-instagram {
+  color: #d41977;
+  width: 20px;
+  height: 20px;
+}
+.redes-instagram:hover {
+  box-shadow: 1px 1px 20px #d41977;
+}
+
+.kath-xxl {
+  font-size: 120px;
+}
+
+.kath-xl {
+  font-size: 80px;
+}
+
+.kath-md {
+  font-size: 72px;
+}
+
+.kath-sm {
+  font-size: 24px;
+}
+
+.kath-xs {
+  font-size: 18px;
+}
+
+.galeria__button {
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+.galeria__contenedor {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -38,15 +108,13 @@
 
 .cabeza__span {
   font-size: 0.7rem;
-  font-family: "Arima", cursive;
   background-color: #000000;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1px;
   width: 100%;
-  height: 120px;
   padding-top: 11px;
-  font-family: "Arima", cursive;
+  height: 30px;
 }
 .cabeza__span p {
   color: #ffffff;
@@ -60,6 +128,22 @@
   flex-direction: none;
   height: 5rem;
 }
+.cabeza__menu--logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.cabeza__menu ul {
+  display: flex;
+  width: 24rem;
+  justify-content: space-around;
+}
+.cabeza__menu ul li {
+  list-style: none;
+}
+.cabeza__menu ul li a {
+  text-decoration: none;
+  color: #000000;
+}
 .cabeza .logo {
   width: 70px;
 }
@@ -67,13 +151,16 @@
   background-color: #e1e2e0;
 }
 
+p {
+  color: #000000;
+  margin: 3rem;
+}
+
 /* galeria */
-.galeria {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  flex-flow: wrap;
+.galeria .carru-display {
+  display: none;
+}
+.galeria__contenedor {
   padding: 2rem 0 3rem;
 }
 .galeria__producto {
@@ -84,13 +171,6 @@
 .galeria__producto img {
   width: 14rem;
 }
-.galeria__button {
-  background-color: #000;
-  color: #ffffff;
-  border: 1px solid #000;
-  border-radius: 10px;
-}
-
 .pie {
   background-color: #000;
   color: #ffffff;
@@ -105,11 +185,17 @@
   .grid__container {
     background-color: rgb(95, 203, 203);
     grid-template-columns: 1fr;
-    grid-template-rows: 0.3fr 0.5fr 1fr 0.2fr;
+    grid-template-rows: 0.1fr 0.3fr 1fr 0.2fr;
     grid-template-areas: "menu" "nota" "principal" "copy";
   }
-  .galeria__producto img {
-    width: 5rem;
+  .galeria {
+    display: flex;
+    padding: 2rem 0 3rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  .galeria .carru-display {
+    display: inline-block;
   }
   .galeria__button {
     background-color: #0b369a;

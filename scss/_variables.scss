@@ -4,4 +4,68 @@
 $color-primary: #000000;
 $color-secondary: #ffffff;
 $mi-fuente-principal: 'Arima', cursive;
+$borde-1: 1px solid $color-primary;
 
+
+
+// MAPAS - @each (recorre el mapa) - map-get(invocas a valores de un mapa)
+
+// ✨ Redes sociales en footer 
+
+//Agrupar estilos-declarar y estilar
+$redes-sociales:(
+    //key   :  valor
+    linkedin: #0000ff,
+    spotify: #18e718,
+    whatsapp: #0e5e0e,
+    instagram: #d41977,
+);
+//    key
+//   ☝ "red-s"     ☝ "color"
+//Llamar de "alguna forma" a todo este grupo 
+@each $red-s, $color in $redes-sociales{
+    .redes-#{$red-s}{
+        color: $color;
+        width: 20px;
+        height: 20px;
+        &:hover{
+            box-shadow: 1px 1px 20px $color;
+        }
+    }
+    
+}
+
+
+// ✨ Font-size 
+$font-size-variant:(
+    xxl: 120px,
+    xl:  80px,
+    md:  72px,
+    sm:  24px,
+    xs:  18px,
+);
+// ☝size ☝num
+@each $size, $num in $font-size-variant{
+    .kath-#{$size}{
+        font-size: $num;
+    }
+};
+
+
+
+
+// ✨ Extend - Una clase que se declara con % y lo incovas con @extend
+
+%button-style{
+    background-color: $color-primary;
+    color: #ffffff;
+    border: $borde-1;
+    border-radius: 10px;
+    font-size: map-get($font-size-variant, xs);
+}
+
+%flex{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
